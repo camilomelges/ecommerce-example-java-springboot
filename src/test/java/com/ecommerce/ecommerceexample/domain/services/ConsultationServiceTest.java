@@ -12,6 +12,7 @@ class ConsultationServiceTest {
 
     @Test
     void shouldBeExistsGetById() {
-        Assertions.assertThatCode(() -> ConsultationService.class.getMethod("getById", int.class)).doesNotThrowAnyException();
+        Assertions.assertThatCode(() -> ConsultationService.class.getMethod("getById", int.class))
+                  .doesNotThrowAnyException();
     }
 }
