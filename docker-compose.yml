@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  restful-web-services-container:
+    image: ecommerce-example:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/ecommerce-example
+    ports:
+      - "8080:8080"
