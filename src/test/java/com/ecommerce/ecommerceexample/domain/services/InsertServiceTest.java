@@ -12,7 +12,7 @@ class InsertServiceTest {
 
     @Test
     void shouldBeExistsPut() {
-        Assertions.assertThatCode(() -> InsertService.class.getMethod("put", Object.class, int.class))
+        Assertions.assertThatCode(() -> InsertService.class.getMethod("put", Object.class))
                   .doesNotThrowAnyException();
     }
 }

@@ -1,10 +1,11 @@
 package com.ecommerce.ecommerceexample.domain.services;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ConsultationService<T> {
 
     public List<T> getAll();
 
-    public T getById(int id);
+    public Optional<T> getById(Long id);
 }

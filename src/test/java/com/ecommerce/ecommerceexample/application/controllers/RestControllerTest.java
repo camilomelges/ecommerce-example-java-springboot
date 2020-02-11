@@ -12,7 +12,7 @@ class RestControllerTest {
 
     @Test
     void shouldBeExistGetById() {
-        Assertions.assertThatCode(() -> RestController.class.getMethod("getById", int.class))
+        Assertions.assertThatCode(() -> RestController.class.getMethod("getById", Long.class))
                   .doesNotThrowAnyException();
     }
 
@@ -24,7 +24,7 @@ class RestControllerTest {
 
     @Test
     void shouldBeExistPut() {
-        Assertions.assertThatCode(() -> RestController.class.getMethod("put", Object.class, int.class))
+        Assertions.assertThatCode(() -> RestController.class.getMethod("put", Object.class))
                   .doesNotThrowAnyException();
     }
 }

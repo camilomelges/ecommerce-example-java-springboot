@@ -16,11 +16,11 @@ public interface RestController<T> {
     public List<T> getAll();
 
     @GetMapping("/{id}")
-    public T getById(@PathVariable int id);
+    public T getById(@PathVariable Long id);
 
     @PostMapping()
     public void post(@RequestBody T t);
 
-    @PutMapping("/{id}")
-    public void put(@RequestBody T t, @PathVariable int id);
+    @PutMapping()
+    public void put(@RequestBody T t);
 }
