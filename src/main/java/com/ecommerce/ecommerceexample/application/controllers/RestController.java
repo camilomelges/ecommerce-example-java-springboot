@@ -19,8 +19,8 @@ public interface RestController<T> {
     public T getById(@PathVariable Long id);
 
     @PostMapping()
-    public void post(@RequestBody T t);
+    public T post(@RequestBody T t);
 
     @PutMapping()
-    public void put(@RequestBody T t);
+    public T put(@RequestBody T t);
 }
