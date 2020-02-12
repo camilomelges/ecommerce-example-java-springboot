@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
@@ -17,8 +18,8 @@ public class ShoppingProduct {
     @Id
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id", nullable = false)
+    @ManyToOne(targetEntity = Product.class)
+    @NotNull(message = "Not be possible insert shopping_products without shopping")
     private Product product;
 
     @Column(name = "quantity", nullable = false)

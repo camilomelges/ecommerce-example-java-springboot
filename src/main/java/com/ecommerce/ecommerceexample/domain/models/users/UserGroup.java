@@ -1,5 +1,6 @@
 package com.ecommerce.ecommerceexample.domain.models.users;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -18,8 +19,7 @@ public class UserGroup {
     @Column(name = "name", nullable = false, columnDefinition = "user_type DEFAULT 'BUYER'")
     private String name;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @ManyToOne(targetEntity = User.class)
     private User user;
 
     @Column(name = "created_on", nullable = false, columnDefinition = "TIMESTAMP DEFAULT NOW()")
